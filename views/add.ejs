@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<title>Add Notice </title>
+<form method="POST" action="/enter">
+<body>
+
+  <div class="container">
+
+    <p>Please fill in the details</p>
+    <hr>
+    <label for="title"><b>Title</b></label>
+    <input type="text" placeholder="Title" name="title" required>
+
+    <label for="body"><b>Body</b></label>
+    <textarea rows="7" cols="63.5" type="text" placeholder="Enter Notice" name="body" required></textarea>
+
+    <div class="clearfix">
+      <button type="submit" class="signupbtn">Submit</button>
+    </div>
+  </div>
+</form>
+</body>
+
+
+
+
+
+
+
+ <style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box}
+
+.container{
+  width:500px;
+   height:450px;
+   background-color: #3B5998;
+   color: white;
+   position: relative;
+   top: 100px;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 30px;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    align-items: center;
+}
+
+button:hover {
+    opacity:1;
+}
+
+
+
+/* Add padding to container elements */
+.container {
+    padding: 20px;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+
+}
+
+.clearfix{
+  font-size: 20px;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+}
+</style>
+</body>
+
+
+</html>
