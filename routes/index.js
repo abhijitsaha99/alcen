@@ -32,11 +32,13 @@ router.get('/details/:title', function(req, res, next) {
   res.render('detail', {"datas": data[0]});
   })
   });
-router.get('/login', function(req, res, next) {
+  router.get('/login', function(req, res, next) {
+  var flag=0;
   res.render('form', {
     title: 'form',
     success: false,
-    errors: req.session.errors
+    errors: req.session.errors,
+    "flag":flag
   });
   req.session.errors = null;
 });
@@ -46,16 +48,19 @@ router.post('/login', function(req, res, next) {
   if (req.body.email == 'admin' && req.body.pass == 'admin') {
     session.uniqueID = req.body.email;
   }
-  res.redirect('redirect')
+  res.redirect('redirect');
 });
 router.get('/redirect', function(req, res, next) {
   session = req.session;
+  var flag=0;
   if (session.uniqueID) {
     res.render('add');
     console.log(session.uniqueID);
   } else {
     {
-      res.end('kaun ho bhai');
+      var flag=1;
+      //res.end('kaun ho bhai');
+     res.render('form',{"flag":flag});
     }
   }
 });

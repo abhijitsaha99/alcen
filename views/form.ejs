@@ -1,9 +1,10 @@
-<h2><%-title-%></h2>
 <form action="/login" method="post">
   <label for="email" id="email" name="email">
     <input type="text" id="email" name="email">
     <label for="pass" id="pass" name="pass">
       <input type="password" id="pass" name="pass">
       <button type="submit">Sign in</button>
-
+      <% if (flag===1){ %>
+      <p id="msg">ADMINS ONLY<p>
+      <% } %>
 </form>
