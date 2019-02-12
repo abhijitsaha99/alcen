@@ -10,7 +10,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var app = express();
 var mongoose = require('mongoose');
-var mongoDB = 'mongodb://127.0.0.1:27017/news';
+var mongoDB = 'mongodb+srv://mahes:mahes1999@alcen-rpmf1.mongodb.net/test?retryWrites=true';
 mongoose.connect(mongoDB);
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;

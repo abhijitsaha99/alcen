@@ -64,7 +64,7 @@ router.post('/enter', function(req, res) {
   let latestnews = new news(req.body);
   console.log(latestnews);
   latestnews.save()
-    .then(res.render('test'))
+    .then(res.redirect('/tst'))
     .catch((err) => console.log(err))
 });
 router.get('/tst', function(req, res, next) {
