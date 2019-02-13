@@ -16,8 +16,11 @@ router.get('/', function(req, res, next) {
 router.get('/ab1', function(req, res, next) {
   res.render("aboutus1");
 });
-router.get('/products', function(req, res, next) {
-  res.render('products');
+router.get('/product', function(req, res, next) {
+  res.render('product');
+});
+router.get('/project', function(req, res, next) {
+  res.render('project');
 });
 router.get('/details/:title', function(req, res, next) {
   var d=req.params.title;
