@@ -209,9 +209,7 @@
                   <div id="MyDivName" class="card-img" style="overflow:hidden; height: 300px;" onmouseover="pauseDiv()" onmouseout="resumeDiv()">
                     <ul>
                       <% for(var i=0; i<datas.length; i++ ) { %>
-                      <li><span class="title"><a href="/details/<%= datas[i].title %>"><%= datas[i].title %></a> </span>
-                        <span class="body"><%= datas[i].body %> </span>
-                      </li>
+                      <li><span class="title"><a href="/details/<%= datas[i].title %>"><%= datas[i].title %></a> </span></li>
                       <% } %>
                     </ul>
 

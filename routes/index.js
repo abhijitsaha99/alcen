@@ -41,7 +41,7 @@ router.get('/details/:title', function(req, res, next) {
 router.post('/login', function(req, res, next) {
   session = req.session;
   console.log(req.body);
-  if (req.body.email == 'admin' && req.body.pass == 'admin') {
+  if (req.body.email == 'admin@xyz.com' && req.body.pass == 'admin') {
     session.uniqueID = req.body.email;
   }
   res.redirect('redirect');
