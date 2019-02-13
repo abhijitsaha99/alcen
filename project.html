@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bootstrap Navbars</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <style type="text/css">
+    /* body { padding-top: 70px; } */
+    /* body{
+      background-color: #edffb3;
+    } */
+    .jumbotron {
+      color: #2c3e50;
+      background: linear-gradient(#A9A9A9, #eee);
+
+
+    }
+    .navbar-inverse {
+      background: #2c3e50;
+      color: white;
+    }
+    .navbar-inverse .navbar-brand, .navbar-inverse a{
+      color:white;
+    }
+    .navbar-inverse .navbar-nav>li>a {
+      color: white;
+    }
+
+    .company-logo {
+      background-color: #edffb3;
+    }
+
+    .page-footer{
+      background-color: #2c3e50;
+      padding-top: 10px;
+      padding-bottom: 20px;
+      font-size: 15px;
+    }
+
+    p{
+      color: #ffffff;
+
+    }
+
+    #company-name{
+      font-size:25px;
+      color:#edffb3
+    }
+
+		.dropdown-menu{
+			background: #293e50;
+		}
+
+		.dropdown-menu>li>a{
+			color: #ffffff;
+		}
+
+		#highlights{
+			font-size: 20px;
+			padding-top: 10px;
+		}
+
+		.thumbnail:hover{
+
+			transform: scale(1.1);
+
+		}
+
+
+
+  </style>
+
+</head>
+<body>
+	<div class="company-logo">
+		<img src="photo0.png" alt="Alcen Technology Logo" width="400" >
+
+	</div>
+
+<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+		<div class="navbar-header">
+
+
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-demo">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<!-- <a href="#" class="navbar-brand fcolour">Home</a> -->
+		</div>
+		<div class="collapse navbar-collapse" id="navbar-demo">
+			<ul class="nav navbar-nav">
+			 <li><a href="#">Home</a></li>
+				<li><a href="#">About Us</a></li>
+				<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">Products
+					<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						 <li><a href="#">Hybrid Solar Inverter</a></li>
+						 <li><a href="#">Solar Home Lighting System</a></li>
+						 <li><a href="#">Solar Street Lighting System</a></li>
+						 <li><a href="#">Digital DC Energy Meter</a></li>
+						 <li><a href="#">Remote Monitoring & Diagnostic System</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Project</a></li>
+				<li><a href="#">Contact us</a></li>
+
+			</ul>
+
+
+		</div>
+	</div>
+
+</nav>
+<div class="container-fluid">
+
+	  <div class="jumbotron">
+	    <h1><i class="fa fa-file-text"></i> Projects </h1>
+	    <!-- <p>A bunch of beautiful images that I didn't take (except for the first one!)</p> -->
+	  </div>
+
+    <div class="row">
+      <!-- <div class="col-lg-4 col-sm-6">
+        <div class="thumbnail">
+          <img src="photo0.png">
+        </div>
+      </div> -->
+      <div class="col-lg-3 col-sm-6">
+        <div class="thumbnail">
+          <img src="pro1.jpg">
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6">
+        <div class="thumbnail">
+          <img src="pro2.jpg">
+        </div>
+      </div>
+			<div class="col-lg-3 col-sm-6">
+				<div class="thumbnail">
+					<img src="pro8.jpg">
+				</div>
+			</div>
+      <div class="col-lg-3 col-sm-6">
+        <div class="thumbnail">
+          <img src="pro3.png" >
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6">
+        <div class="thumbnail">
+          <img src="pro4.jpg">
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6">
+        <div class="thumbnail">
+          <img src="pro5.jpg">
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6">
+        <div class="thumbnail">
+          <img src="pro6.jpg">
+        </div>
+      </div>
+			<div class="col-lg-3 col-sm-6">
+        <div class="thumbnail">
+          <img src="pro7.jpg">
+        </div>
+      </div>
+      <!-- <div class="col-lg-4 col-sm-6">
+        <div class="thumbnail">
+          <img src="photo7.png">
+        </div> -->
+      </div>
+      <!-- <div class="col-lg-4 col-sm-6">
+        <div class="thumbnail">
+          <img src="photo8.png">
+      </div>
+    </div> -->
+		<div class="row">
+			<div class="col-lg-12">
+				<br><br><br>
+				<h1 style="border-top: 1px solid #E3E3E3; line-height: 0.0em !important; text-align: center; margin-bottom: 30px; color: #005bae;"><span style="background: #fff !important; padding: 0 10px !important;">HIGHLIGHTS</span></h1>
+
+				<ul id="highlights">
+					<li>ALCEN successfully completed supply, installation, commmissioning &
+							maintenance of 80+ kwp commercial and domestic projects.</li>
+					<li>For OMSPTRI, IRC Village, Nayapalli, we have installed 5 kw roof top solar</li>
+					<li>For Indian Oil Petrol Pump, Khordha , Bhubaneswar we have installed 10 kw
+						   roof top solar.</li>
+					<li>30kw roof top solar for Ugalamani Food Processing Unit at Mancheswar,
+						  Bhubaneswar</li>
+					<li>A 43 kw Concentric Solar Thermal receier for boiler operation is in process of
+							 commissioning at OMFED, Bhubaneswar.</li>
+				</ul>
+				<br><br>
+
+			</div>
+
+		</div>
+  </div>
+
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6"><p id="company-name">Alcen Technologies Private Limited</p></div>
+
+        <div class="col-lg-6"><p>Plot No.:N-2/170,IRC Village,Nayapalli,Bhubaneswar-751015,Odisha<br>Tel.:+91 674 2552984 2552985, Fax: +91 674 2552986</p></div>
+
+      </div>
+
+    </div>
+
+
+
+  </footer>
+
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>
