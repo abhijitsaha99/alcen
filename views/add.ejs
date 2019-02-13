@@ -1,35 +1,49 @@
 <!DOCTYPE html>
 <html>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+
+
+
 <title>Add Notice </title>
 <body>
-  <form method="POST" action="/enter">
+  <center>
+  <form class="form-group " method="POST" action="/enter">
   <div class="container">
 
-    <p>Please fill in the details</p>
+    <p class="">Please fill in the details</p>
     <hr>
     <label for="title"><b>Title</b></label>
-    <input type="text" placeholder="Title" name="title" required>
+    <input type="text" class="form-control" placeholder="Title" name="title" required>
 
     <label for="body"><b>Body</b></label>
-    <textarea rows="7" cols="63.5" type="text" placeholder="Enter Notice" name="body" required></textarea>
+    <textarea rows="7" class="form-control" cols="45" type="text" placeholder="Enter Notice" name="body" required></textarea>
 
-    <div class="clearfix">
-      <button type="submit" class="signupbtn">Submit</button>
-    </div>
+    <button type="submit" class="btn btn-danger">Submit</button>
   </div>
 </form>
+</center>
 </body>
  <style>
-body {font-family: Arial, Helvetica, sans-serif;}
+  body {font-family:  Helvetica, sans-serif;
+    background: url("https://ak5.picdn.net/shutterstock/videos/6917755/thumb/8.jpg");
+    background-repeat: none;
+    background-size: cover;
+
+}
 * {box-sizing: border-box}
 
 .container{
   width:500px;
-   height:450px;
-   background-color: #3B5998;
+   height:500px;
+   background-color: darkgreen;
+   opacity: 0.8;
    color: white;
    position: relative;
-   top: 100px;
+   top: 50px;
+   border: white;
+   border-radius: 10px;
+  
 }
 
 /* Full-width input fields */
@@ -60,7 +74,7 @@ button {
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 100%;
+    width: 60%;
     opacity: 0.9;
     align-items: center;
 }
@@ -77,21 +91,11 @@ button:hover {
 }
 
 /* Clear floats */
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-
-}
-
-.clearfix{
-  font-size: 20px;
-}
 
 /* Change styles for cancel button and signup button on extra small screens */
 @media screen and (max-width: 300px) {
     .cancelbtn, .signupbtn {
-       width: 100%;
+       width:
     }
 }
 </style>
