@@ -11,6 +11,9 @@
 		/* body{
       background-color: #edffb3;
     } */
+		#footer-text{
+			font-size:20px;
+		}
 		.jumbotron {
 			color: #2c3e50;
 			background: linear-gradient(#A9A9A9, #eee);
@@ -76,6 +79,9 @@
 </head>
 
 <body>
+	<div class="container-fluid">
+
+
 	<div class="company-logo">
 		<img src="images/photo0.png" alt="Alcen Technology Logo" width="400" >
 
@@ -95,21 +101,21 @@
 				</div>
 				<div class="collapse navbar-collapse" id="navbar-demo">
 					<ul class="nav navbar-nav">
-						<li><a href="#">Home</a></li>
-						<li><a href="#">About Us</a></li>
+						<li><a href="/">Home</a></li>
+						<li><a href="/ab1">About Us</a></li>
 						<li class="dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#">Products
+							<a class="dropdown-toggle" data-toggle="dropdown" href="/product">Products
 					<span class="caret"></span></a>
 							<ul class="dropdown-menu">
-								<li><a href="#">Hybrid Solar Inverter</a></li>
-								<li><a href="#">Solar Home Lighting System</a></li>
-								<li><a href="#">Solar Street Lighting System</a></li>
-								<li><a href="#">Digital DC Energy Meter</a></li>
-								<li><a href="#">Remote Monitoring & Diagnostic System</a></li>
+								<li><a href="/product">Hybrid Solar Inverter</a></li>
+								<li><a href="/product">Solar Home Lighting System</a></li>
+								<li><a href="/product">Solar Street Lighting System</a></li>
+								<li><a href="/product">Digital DC Energy Meter</a></li>
+								<li><a href="/product">Remote Monitoring & Diagnostic System</a></li>
 							</ul>
 						</li>
-						<li><a href="#">Project</a></li>
-						<li><a href="#">Contact us</a></li>
+						<li><a href="/project">Project</a></li>
+						<li><a href="#bottom">Contact us</a></li>
 
 					</ul>
 
@@ -118,6 +124,8 @@
 			</div>
 
 		</nav>
+	</div>
+
 		<div class="container-fluid">
 
 			<div class="jumbotron">
@@ -190,16 +198,17 @@
 
 												</div>
 											</div>
+											<br>
 
-											<footer class="page-footer">
-												<div class="container">
+											<footer id="bottom" class="page-footer">
+												<div class="container-fluid">
 													<div class="row">
 														<div class="col-lg-6">
 															<p id="company-name">Alcen Technologies Private Limited</p>
 														</div>
 
 														<div class="col-lg-6">
-															<p>Plot No.:N-2/170,IRC Village,Nayapalli,Bhubaneswar-751015,Odisha<br>Tel.:+91 674 2552984 2552985, Fax: +91 674 2552986</p>
+															<p id="footer-text">Plot No.:N-2/170,IRC Village,Nayapalli,Bhubaneswar-751015,Odisha<br>Tel.:+91 674 2552984 2552985, Fax: +91 674 2552986</p>
 														</div>
 
 													</div>

@@ -1,10 +1,26 @@
-<form action="/login" method="post">
-  <label for="email" id="email" name="email">
-    <input type="text" id="email" name="email">
-    <label for="pass" id="pass" name="pass">
-      <input type="password" id="pass" name="pass">
-      <button type="submit">Sign in</button>
-      <% if (flag===1){ %>
-      <p id="msg">ADMINS ONLY<p>
-      <% } %>
-</form>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <style>
+    .admins{
+      font-size: 50px;
+      color: red;
+    }
+
+
+
+  </style>
+  <body>
+    <div class="admins">
+      <h1>ADMINS ONLY</h1>
+      <img src="https://images-na.ssl-images-amazon.com/images/I/51zLZbEVSTL._SX425_.jpg" >
+      <a href="/"><button type="button" name="home" >HOME</button></a>
+
+    </div>
+
+  </body>
+</html>

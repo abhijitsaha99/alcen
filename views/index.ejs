@@ -11,11 +11,12 @@
   <link rel="stylesheet" href="/css/navbarstyle.css">
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 
 </head>
 <style>
   .title{
-    font-size: 15px;
+    font-size: 20px;
     padding-bottom: 20px;
     padding-top: 20px;
     color: black;
@@ -23,6 +24,10 @@
 
   .fas fa-user{
     size: 9px;
+  }
+
+  #home-text{
+    font-family: 'Josefin Sans'
   }
 
 
@@ -77,7 +82,7 @@
             </div>
 
             <div class="container-fluid">
-              <div class="row">
+              <div id="home-text" class="row">
                 <div class="col-lg-1">
 
                 </div>
@@ -118,7 +123,7 @@
                   <div id="MyDivName" class="card-img" style="overflow:hidden; height: 300px;" onmouseover="pauseDiv()" onmouseout="resumeDiv()">
                     <ul>
                       <% for(var i=(datas.length-1); i>=0; i-- ) { %>
-                      <li><span class="title"><a href="/details/<%= datas[i].title %>"><span class="newslist"><%= datas[i].title %></span></a> </span></li>
+                      <li><span class="title"><a href="/details/<%= datas[i].title %>"><%= datas[i].title %></a> </span></li>
                       <% } %>
                     </ul>
 
