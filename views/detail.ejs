@@ -1,31 +1,60 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <link href="css/style.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <style media="screen">
 
-    </style>
-    <meta charset="utf-8">
-    <title><%= datas.title %></title>
-  </head>
-  <body>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <style media="screen">
+  .card-back{
+    background-color: #eee;
+    border: 1px solid black;
+  }
+  </style>
+  <meta charset="utf-8">
+  <title>
+    <%= datas.title %>
+  </title>
+</head>
 
-<div class="container-fluid">
+<body>
 
-  <br><br><br>
-  <div class="row">
-    <div class="col-lg-8 col-xs-12 col-sm-12">
-      <h1 id="ab1" class="card-header" style="font-family:'Josefin Sans'; font-size: 30px;max-width:100%; ">
+  <div class="container-fluid">
+
+    <br><br><br>
+    <div class="row">
+      <div class="col-lg-8">
+        <h1 id="ab1" class="card-header" style="font-family:'Josefin Sans'; font-size: 30px;max-width:100%; ">
         <%= datas.title %>
       </h1>
-      <hr>
-      <p style="font-family:'Josefin Sans';">
-        <%= datas.body %></p>
         <hr>
-<a href="/"><button type="button" class="btn btn-dark">Home   </button></a>
-  </body>
+        <p style="font-family:'Josefin Sans';">
+          <%= datas.body %>
+        </p>
+        <hr>
+        <a href="/"><button type="button" class="btn btn-dark">Home   </button></a>
+      </div>
+        <div class="col-lg-3 card">
+          <br><br><br>
+          <div id="xyz" class="">
+            <h4 class="card-back">NEWS EVENTS</h4>
+          </div>
+          <div id="MyDivName" class="card-img" style="overflow:overflow; height: 300px;">
+            <ul>
+              <% for(var i=(fulldata.length-1); i>=0; i-- ) { %>
+              <li><span class="title"><a href="/details/<%= fulldata[i].title %>"><%= fulldata[i].title %></a> </span></li>
+              <% } %>
+            </ul>
+
+          </div>
+
+
+        </div>
+      </div>
+
+  </div>
+</body>
+
 </html>

@@ -19,26 +19,35 @@ router.get('/aboutus', function(req, res, next) {
 router.get('/product', function(req, res, next) {
   res.render('product');
 });
+router.get('/f', function(req, res, next) {
+  res.render('form');
+});
 router.get('/project', function(req, res, next) {
   res.render('project');
 });
 router.get('/details/:title', function(req, res, next) {
   var d=req.params.title;
+  var temp;
   var query= news.find({title:d});
   query.select('title body');
   query.exec((err,data) => {
-  console.log(data);
-  res.render('detail', {"datas": data[0]});
+  console.log("printing");
+  temp=data;
   })
-  });
+  var query2 = news.find({})
+  query2.select('title body');
+  query2.exec((err,fulldata) => {
+    console.log(fulldata);
+    res.render('detail', {"datas": temp[0],"fulldata":fulldata});
+  })
+});
   router.get('/login', function(req, res, next) {
   var flag=0;
   res.render('login', {
     title: 'form',
     success: false,
     errors: req.session.errors,
-    "flag":flag
-  });
+    });
   req.session.errors = null;
 });
 router.post('/login', function(req, res, next) {
@@ -51,15 +60,12 @@ router.post('/login', function(req, res, next) {
 });
 router.get('/redirect', function(req, res, next) {
   session = req.session;
-  var flag=0;
   if (session.uniqueID) {
     res.render('add');
     console.log(session.uniqueID);
   } else {
     {
-      var flag=1;
-      //res.end('kaun ho bhai');
-     res.render('form',{"flag":flag});
+      res.render('form');
     }
   }
 });
@@ -72,13 +78,5 @@ router.post('/enter', function(req, res) {
     .catch((err) => console.log(err))
 });
 
-router.get('/tst', function(req, res, next) {
-  var query = news.find({})
-  query.select('title body');
-  query.exec((err,data) => {
-    console.log(data);
-    res.render('test', {"datas": data});
-  })
-  });
 
 module.exports = router;
