@@ -10,10 +10,28 @@
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/navbarstyle.css">
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-  
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
 </head>
+<style>
+  .title{
+    font-size: 15px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    color: black;
+  }
+
+  .fas fa-user{
+    size: 9px;
+  }
+
+
+
+</style>
 <body onLoad="scrollDiv_init()">
+  <div class="container-fluid">
   <%- include('navbar') %>
+</div>
 
     <div class="container">
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -100,7 +118,7 @@
                   <div id="MyDivName" class="card-img" style="overflow:hidden; height: 300px;" onmouseover="pauseDiv()" onmouseout="resumeDiv()">
                     <ul>
                       <% for(var i=(datas.length-1); i>=0; i-- ) { %>
-                      <li><span class="title"><a href="/details/<%= datas[i].title %>"><%= datas[i].title %></a> </span></li>
+                      <li><span class="title"><a href="/details/<%= datas[i].title %>"><span class="newslist"><%= datas[i].title %></span></a> </span></li>
                       <% } %>
                     </ul>
 
@@ -108,33 +126,42 @@
 
 
                 </div>
+                <div class="col-lg-1">
+
+                </div>
 
               </div>
 
               <div class="row">
 
+
+
                 <br><br>
-                <h1 style="border-top: 1px solid #E3E3E3; line-height: 0.0em !important; text-align: center; margin-bottom: 30px; color: #005bae;"><span style="background: #fff !important; padding: 0 10px !important;">SOME OF OUR ESTEEMED CLIENT</span></h1>
+
+                  <h1 style="border-top: 1px solid #E3E3E3; line-height: 0.0em !important; text-align: center; margin-bottom: 30px; color: #005bae;"><span style="background: #fff !important; padding: 0 10px !important;">SOME OF OUR ESTEEMED CLIENT</span></h1>
+
+
                 <br><br>
                 <div class="col-lg-4 col-sm-6">
                   <div class="thumbnail">
-                    <img src="pic11.png">
-        </div>
+                    <img src="images/pic11.png">
+                  </div>
                   </div>
                   <div class="col-lg-4 col-sm-6">
                     <div class="thumbnail">
-                      <img src="pic12.png">
-        </div>
+                      <img src="images/pic12.png">
+                    </div>
                     </div>
                     <div class="col-lg-4 col-sm-6">
                       <div class="thumbnail">
-                        <img src="pic13.png" >
-        </div>
+                        <img src="images/pic13.png" >
+                      </div>
 
                       </div>
+
                       <br><br><br><br>
 
-  </div>
+              </div>
                     </div>
 
 
@@ -146,8 +173,9 @@
                           </div>
 
                           <div class="col-lg-6">
-                            <p id="footer-text">Plot No.:N-2/170,IRC Village,Nayapalli,Bhubaneswar-751015,Odisha<br>Tel.:+91 674 2552984 2552985, Fax: +91 674 2552986</p>
+                            <p id="footer-text">Plot No.:N-2/170,IRC Village,Nayapalli,Bhubaneswar-751015,Odisha<br>Tel.:+91 674 2552984 2552985, Fax: +91 674 2552986<br><a href="/login"><i class="fas fa-user"></i><a></p>
                           </div>
+
 
                         </div>
 
