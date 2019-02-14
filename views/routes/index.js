@@ -5,7 +5,7 @@ const news = require('../models/notice')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {});
-router.get('/ab1', function(req, res, next) {
+router.get('/aboutus', function(req, res, next) {
   res.render("aboutus1");
 });
 router.get('/ab2', function(req, res, next) {

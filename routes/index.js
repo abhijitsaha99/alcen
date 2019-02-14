@@ -13,7 +13,7 @@ router.get('/', function(req, res, next) {
   })
   });
 
-router.get('/ab1', function(req, res, next) {
+router.get('/aboutus', function(req, res, next) {
   res.render("aboutus1");
 });
 router.get('/product', function(req, res, next) {
@@ -68,7 +68,7 @@ router.post('/enter', function(req, res) {
   let latestnews = new news(req.body);
   console.log(latestnews);
   latestnews.save()
-    .then(res.redirect('/tst'))
+    .then(res.redirect('/'))
     .catch((err) => console.log(err))
 });
 
