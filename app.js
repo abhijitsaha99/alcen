@@ -10,7 +10,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var app = express();
 var mongoose = require('mongoose');
-var mongoDB = 'mongodb+srv://mahes:mahes1999@alcen-rpmf1.mongodb.net/test?retryWrites=true';
+var mongoDB = 'mongodb://mahes:<PASSWORD>@alcen-shard-00-00-rpmf1.mongodb.net:27017,alcen-shard-00-01-rpmf1.mongodb.net:27017,alcen-shard-00-02-rpmf1.mongodb.net:27017/test?ssl=true&replicaSet=alcen-shard-0&authSource=admin&retryWrites=true';
 mongoose.connect(mongoDB);
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;
