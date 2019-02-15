@@ -31,13 +31,14 @@ router.get('/details/:title', function(req, res, next) {
   var query= news.find({title:d});
   query.select('title body');
   query.exec((err,data) => {
-  console.log("printing");
+  // console.log("printing");
   temp=data;
   })
   var query2 = news.find({})
   query2.select('title body');
-  query2.exec((err,fulldata) => {
-    console.log(fulldata);
+  query2.exec((err2,fulldata) => {
+    console.log(err2);
+    // console.log(fulldata);
     res.render('detail', {"datas": temp[0],"fulldata":fulldata});
   })
 });
@@ -72,7 +73,7 @@ router.get('/redirect', function(req, res, next) {
 router.post('/enter', function(req, res) {
   //console.log(req.body);
   let latestnews = new news(req.body);
-  console.log(latestnews);
+  // console.log(latestnews);
   latestnews.save()
     .then(res.redirect('/'))
     .catch((err) => console.log(err))
