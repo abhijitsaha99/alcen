@@ -32,16 +32,16 @@ router.get('/details/:title', function(req, res, next) {
   query.select('title body');
   query.exec((err,data) => {
   // console.log("printing");
-  temp=data;
+  res.render('detail', {"datas": data[0]});
+//  temp=data;
   })
-  var query2 = news.find({})
-  query2.select('title body');
-  query2.exec((err2,fulldata) => {
-    console.log(err2);
+  // var query2 = news.find({})
+  // query2.select('title body');
+  // query2.exec((err2,fulldata) => {
+  //   console.log(err2);
     // console.log(fulldata);
-    res.render('detail', {"datas": temp[0],"fulldata":fulldata});
   })
-});
+;
   router.get('/login', function(req, res, next) {
   var flag=0;
   res.render('login', {
