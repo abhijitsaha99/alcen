@@ -31,7 +31,7 @@ router.get('/details/:title', function(req, res, next) {
   var query= news.find({title:d});
   query.select('title body');
   query.exec((err,data) => {
-  // console.log("printing");
+  console.log(data);
   res.render('detail', {"datas": data[0]});
 //  temp=data;
   })
