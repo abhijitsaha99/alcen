@@ -9,7 +9,6 @@
   <!-- <link href="css/style.css" rel="stylesheet" type="text/css"> -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-
   <style>
   .card-back{
     background-color: #eee;
@@ -39,7 +38,7 @@
   </title>
 </head>
 
-<body>
+<body onload="action()">
 
   <div class="container-fluid">
 
@@ -55,15 +54,28 @@
         </p>
         <hr>
         <a href="/"><button type="button" class="btn btn-dark">Home   </button></a>
+        <% if(flag) { %>
+        <a href="/delete/<%= datas.title %>" class="btn btn-dark" id="toglee">  <button>Delete</button></a>
+        <% } %>
       </div>
         <div class="col-lg-3">
           <br><br><br>
           <div id="xyz" class="">
             <h4 class="card-back">NEWS EVENTS</h4>
+            <ul>
+              <% for(var i=(fulldata.length-1); i>=0; i-- ) { %>
+              <li>
+
+                <span class="title">
+                  <a href="/details/<%= fulldata[i].title %>"><%= fulldata[i].title %></a>
+                </span>
+              </li>
+              <% } %>
+            </ul>
           </div>
           <div id="MyDivName" class="card-img" style="overflow:overflow; height: 300px;">
 
-            
+
 
 
           </div>

@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var session;
+var flag=false;
 const news = require('../models/notice');
 const career = require('../models/careerSchema');
 
@@ -52,28 +53,17 @@ router.get('/f', function(req, res, next) {
 router.get('/project', function(req, res, next) {
   res.render('project');
 });
-router.get('/details/:title', function(req, res, next) {
-  var d = req.params.title;
-  var temp;
-  var query = news.find({
-    title: d
-  });
-  query.select('title body');
-  query.exec((err, data) => {
-    console.log(data);
-    res.render('detail', {
-      "datas": data[0]
-    });
-    //  temp=data;
-  })
-  // var query2 = news.find({})
-  // query2.select('title body');
-  // query2.exec((err2,fulldata) => {
-  //   console.log(err2);
-  // console.log(fulldata);
+router.get('/details/:title', async function(req, res, next) {
+ let title = req.params.title
+ let datas = await news.find({title: title}, 'title body')
+ let fulldata = await news.find({}, 'title body')
+ console.log(flag);
+ res.render('detail', {
+   "datas": datas[0], "fulldata": fulldata , "flag":flag
+ })
 });
 router.get('/login', function(req, res, next) {
-  var flag = 0;
+//  var flag = 0;
   res.render('login', {
     title: 'form',
     success: false,
@@ -86,6 +76,10 @@ router.post('/login', function(req, res, next) {
   console.log(req.body);
   if (req.body.email == 'admin@xyz.com' && req.body.pass == 'admin') {
     session.uniqueID = req.body.email;
+    flag=true;
+  }
+  else{
+    flag=false;
   }
   res.redirect('redirect');
 });
