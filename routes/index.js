@@ -21,7 +21,7 @@ router.get('/delete/:title', function(req, res, next) {
   news.deleteOne({
     title: deleteTitle
   }, function(err) {
-    res.end('hello');
+    res.redirect('/');
   });
   });
 router.get('/career', function(req, res, next) {
