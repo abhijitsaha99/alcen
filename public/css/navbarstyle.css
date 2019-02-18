@@ -1,19 +1,36 @@
-.navbar-inverse {
+body{
+
+  background-image: url(https://cratewholesale.com/wp-content/uploads/2012/05/light-green-background-2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+
+
+}
+  #footer-text{
+    font-size:20px;
+  }
+
+  .navbar{
+    border: none;
+    border-radius: none;
+  }
+
+  .navbar-inverse {
     background: #2c3e50;
     color: white;
   }
-  .navbar-inverse .navbar-brand, .navbar-inverse a{
-    color:white;
+
+  .navbar-inverse .navbar-brand,
+  .navbar-inverse a {
+    color: black;
   }
+
   .navbar-inverse .navbar-nav>li>a {
-    color: white;
+    color: #2c3e50	;
   }
 
-  .company-logo {
-    background-color: #edffb3;
-  }
-
-  .page-footer{
+    .page-footer {
     background-color: #2c3e50;
     padding-top: 10px;
     padding-bottom: 20px;
@@ -21,40 +38,29 @@
   }
 
 
-  #company-name{
-    font-size:25px;
-    color:#edffb3
+  #highlights {
+    font-size: 20px;
+    padding-top: 10px;
   }
 
-  .dropdown-menu{
-    background: #293e50;
-  }
+  .thumbnail:hover {
 
-  .dropdown-menu>li>a{
-    color: #ffffff;
-  }
+    transform: scale(1.1);
 
-  p{
+  }
+  .nav > li > a{
     font-size: 18px;
+    padding-top: 15px;
+    color: #fff;
   }
 
-  #xyz{
-    background: #2c3e50;
-    color: #ffffff;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 70px;
-  }
+  #nav-content{
+    padding-top: 20px;
 
-  #company-name{
-    font-size:25px;
-    color:#edffb3
   }
+  .navbar-nav > li > a:hover {
 
-  #footer-text{
-    color:#ffffff;
-  }
+    color: #008e00!important;
+    background-color: #d6e3c5!important;
 
-  .card-img{
-    background: #eee;
-  }
+}

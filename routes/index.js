@@ -51,6 +51,9 @@ router.get('/career', function(req, res, next) {
 router.get('/aboutus', function(req, res, next) {
   res.render("aboutus1");
 });
+router.get('/career-test', function(req, res, next) {
+  res.render("career-test");
+});
 router.get('/product', function(req, res, next) {
   res.render('product');
 });

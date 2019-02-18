@@ -8,16 +8,28 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 
   </head>
   <style>
+  body{
+
+    background-image: url(https://cratewholesale.com/wp-content/uploads/2012/05/light-green-background-2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+
+
+  }
   .jumbotron {
-    color: #2c3e50;
-    background: linear-gradient(#A9A9A9, #eee);
-
-
+    color: #fff;
+    background: linear-gradient(#75777a,#2c3e50);
+  }
+  .navbar{
+    border: none;
+    border-radius: none;
   }
   .navbar-inverse {
     background: #2c3e50;
@@ -26,11 +38,16 @@
 
   .navbar-inverse .navbar-brand,
   .navbar-inverse a {
-    color: white;
+    color: black;
   }
+  .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+
+    border: 0px;
+
+}
 
   .navbar-inverse .navbar-nav>li>a {
-    color: white;
+    color: #2c3e50;
   }
 
   .company-logo {
@@ -43,16 +60,23 @@
     padding-bottom: 20px;
     font-size: 15px;
   }
+  .navbar-nav > li > a:hover {
 
+    color: #008e00!important;
+    background-color: #d6e3c5!important;
 
+}
 
-  #company-name {
-    font-size: 25px;
-    color: #edffb3
-  }
- #footer-text{
-   color: white;
- }
+#company-name{
+  font-size:25px;
+  color:#edffb3;
+  padding-left: 10px;
+}
+
+#footer-text{
+  color:#ffffff;
+  padding-left: 10px;
+}
   .dropdown-menu {
     background: #293e50;
   }
@@ -96,66 +120,47 @@
     .container{
 
     }
+
+    .nav > li > a{
+      font-size: 18px;
+      padding-top: 15px;
+      color: #fff;
+    }
+
+    #nav-content{
+      padding-top: 20px;
+
+    }
+
+
   </style>
 
   <body>
-    <div class="container-fluid">
-
-
-    <div class="company-logo">
-  		<img class="img-responsive"src="images/photo0.png" alt="Alcen Technology Logo" width="400" >
-
-  	</div>
-
-  		<nav class="navbar navbar-inverse">
-  			<div class="container-fluid">
+  		<nav class="navbar navbar-inverse" style="background-color:#eee;" >
   				<div class="navbar-header">
-
-
   					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-demo">
   				<span class="icon-bar"></span>
   				<span class="icon-bar"></span>
   				<span class="icon-bar"></span>
   			</button>
-  					<!-- <a href="#" class="navbar-brand fcolour">Home</a> -->
   				</div>
           <div class="collapse navbar-collapse" id="navbar-demo">
-            <ul class="nav navbar-nav">
-              <li><a href="/">Home</a></li>
-              <li><a href="/aboutus">About Us</a></li>
-              <!-- <li><a href='/product'>Products</a></li> -->
-              <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="/product">Products
-              <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="/product">Hybrid Solar Inverter</a></li>
-                  <li><a href="/product">Solar Home Lighting System</a></li>
-                  <li><a href="/product">Solar Street Lighting System</a></li>
-                  <li><a href="/product">Digital DC Energy Meter</a></li>
-                  <li><a href="/product">Remote Monitoring & Diagnostic System</a></li>
-                </ul>
-              </li>
-              <li><a href="/project">Project</a></li>
-              <li><a href="#bottom">Contact us</a></li>
-
+            <ul class="nav navbar-nav" style="color: black;">
+              <li><a href="/"><img src="images/logo1.png" width="250" height="60" alt=""></a></li>
+              <li id="nav-content"><a href="/aboutus">About Us</a></li>
+              <li id="nav-content"><a href="/product">Products</a></li>
+              <li id="nav-content"><a href="/project">Project</a></li>
+              <li id="nav-content"><a href="#bottom">Contact us</a></li>
+              <li id="nav-content"><a href="/career">Career</a></li>
             </ul>
-
-
           </div>
-  			</div>
-
   		</nav>
-    </div>
-
     <div class="container-fluid">
       <div class="jumbotron">
         <h1><i class="fa fa-briefcase"></i> Our Products </h1>
-
-
       </div>
       <div class="row">
         <div class="col-lg-1 col-sm-12 col-xs-12">
-
         </div>
         <div class="col-lg-7 col-sm-12 col-xs-12">
           <h3 id="p1"><b>HYBRID SOLAR INVERTER (HSI)</b></h3><hr>
@@ -172,12 +177,7 @@
 
           <h3 id="p5"><b>REMOTE MONITORING  & DIAGONISTIC SYSTEM (RMS)</b></h3><hr>
           <p>Primarily developed to monitor the performance of a Solar PV Power Plant (SPP)of any size, to maximize solar power harvesting and reduce maintenance cost and time, for analysis of the plant performance data. It also has the capability to transfer the logged data to Agni’s server for remote monitoring purpose. Generally Agni provides a user ID and a password to the intended customer for monitoring purpose. Customer can monitor their SPP remotely with the help of a monitoring web-portal, with the supplied ID and password, using any standard web-browser like Mozilla, firefox, google chrome.Agni will maintain the server, reducing the customer’s effort to maintain the same.</p><br><br>
-
-
-
         </div>
-
-
         <div class="col-lg-3 col-sm-12 col-xs-12">
           <br><br><br>
           <div id="xyz">
@@ -186,44 +186,31 @@
           <div class="w3-container">
 
             <br>
-            <a href="#p1"><b>HYBRID SOLAR INVERTER</b></a><br><br>
-            <a href="#p2"><b>SOLAR HOME LIGHTING SYSTEM</b></a><br><br>
-            <a href="#p3"><b>SOLAR STREET LIGHTING SYSTEM</b></a><br><br>
-            <a href="#p4"><b>DIGITAL DC ENERGY METER<b></a><br><br>
-            <a href="#p5"><b>REMOTE MONITORING & DIAGONISTIC SYSTEM<b></a><br><br>
+            <ul>
+              <li><a href="#p1"><b>HYBRID SOLAR INVERTER</b></a><br><br></li>
+              <li><a href="#p2"><b>SOLAR HOME LIGHTING SYSTEM</b></a><br><br></li>
+              <li><a href="#p3"><b>SOLAR STREET LIGHTING SYSTEM</b></a><br><br></li>
+              <li><a href="#p4"><b>DIGITAL DC ENERGY METER<b></a><br><br></li>
+              <li><a href="#p5"><b>REMOTE MONITORING & DIAGONISTIC SYSTEM<b></a><br><br></li>
+
+            </ul>
           </div>
-
-
         </div>
         <div class="col-lg-1 col-sm-12 col-xs-12">
-
         </div>
-
-
-
-
-
       </div>
+      </div>
+      <br><br>
       <footer id="bottom" class="page-footer">
-        <div class="container-fluid">
           <div class="row">
             <div class="col-lg-6">
               <p id="company-name">Alcen Technologies Private Limited</p>
             </div>
-
             <div class="col-lg-6">
-              <p id="footer-text">Plot No.:N-2/170,IRC Village,Nayapalli,Bhubaneswar-751015,Odisha<br>Tel.:+91 674 2552984 2552985, Fax: +91 674 2552986</p>
+              <p id="footer-text">Plot No.- 24/1/A, Chandaka industial Estate,NIFT Building,Near KIIT Campus,BHUBANESWAR-751024. ,Odisha<br>Tel.:+91 674 2552984 2552985, Fax: +91 674 2552986<br>Email: alcentechnology@gmail.com<br><a href="/login"><i class="fas fa-user" style="color:white;">Admin Login</i><a></p>
             </div>
-
           </div>
-
-        </div>
-
-
-
       </footer>
-
-    </div>
 
   </body>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

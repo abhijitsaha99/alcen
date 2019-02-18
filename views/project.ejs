@@ -7,20 +7,27 @@
 
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
 	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 	<style type="text/css">
-		/* body { padding-top: 70px; } */
-		/* body{
-      background-color: #edffb3;
-    } */
-		#footer-text{
-			font-size:20px;
-		}
+	body{
+
+    background-image: url(https://cratewholesale.com/wp-content/uploads/2012/05/light-green-background-2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+
+
+  }
+
 		.jumbotron {
-			color: #2c3e50;
-			background: linear-gradient(#A9A9A9, #eee);
-
-
+	    color: #fff;
+	    background: linear-gradient(#75777a,#2c3e50);
+	  }
+		.navbar{
+			border: none;
+			border-radius: none;
 		}
 
 		.navbar-inverse {
@@ -30,18 +37,14 @@
 
 		.navbar-inverse .navbar-brand,
 		.navbar-inverse a {
-			color: white;
+			color: black;
 		}
 
 		.navbar-inverse .navbar-nav>li>a {
-			color: white;
+			color: #2c3e50	;
 		}
 
-		.company-logo {
-			background-color: #edffb3;
-		}
-
-		.page-footer {
+			.page-footer {
 			background-color: #2c3e50;
 			padding-top: 10px;
 			padding-bottom: 20px;
@@ -53,10 +56,17 @@
 
 		}
 
-		#company-name {
-			font-size: 25px;
-			color: #edffb3
-		}
+		#company-name{
+	    font-size:25px;
+	    color:#edffb3;
+	    padding-left: 10px;
+	  }
+
+	  #footer-text{
+	    color:#ffffff;
+	    padding-left: 10px;
+			font-size: 18px;
+	  }
 
 		.dropdown-menu {
 			background: #293e50;
@@ -76,58 +86,47 @@
 			transform: scale(1.1);
 
 		}
+		.nav > li > a{
+			font-size: 18px;
+			padding-top: 15px;
+			color: #fff;
+		}
+
+		#nav-content{
+			padding-top: 20px;
+
+		}
+		.navbar-nav > li > a:hover {
+
+			color: #008e00!important;
+			background-color: #d6e3c5!important;
+
+	}
+
 	</style>
 
 </head>
 
 <body>
-	<div class="container-fluid">
-
-
-	<div style="width:100%;!important"class="company-logo">
-		<img src="images/photo0.png" alt="Alcen Technology Logo" width="390" >
-
-	</div>
-
-		<nav class="navbar navbar-inverse">
-			<div class="container-fluid">
-				<div class="navbar-header">
-
-
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-demo">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-					<!-- <a href="#" class="navbar-brand fcolour">Home</a> -->
-				</div>
-				<div class="collapse navbar-collapse" id="navbar-demo">
-					<ul class="nav navbar-nav">
-						<li><a href="/">Home</a></li>
-						<li><a href="/aboutus">About Us</a></li>
-						<li class="dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" href="/product">Products
-					<span class="caret"></span></a>
-							<ul class="dropdown-menu">
-								<li><a href="/product">Hybrid Solar Inverter</a></li>
-								<li><a href="/product">Solar Home Lighting System</a></li>
-								<li><a href="/product">Solar Street Lighting System</a></li>
-								<li><a href="/product">Digital DC Energy Meter</a></li>
-								<li><a href="/product">Remote Monitoring & Diagnostic System</a></li>
-							</ul>
-						</li>
-						<li><a href="/project">Project</a></li>
-						<li><a href="#bottom">Contact us</a></li>
-
-					</ul>
-
-
-				</div>
+	<nav class="navbar navbar-inverse" style="background-color:#eee;" >
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-demo">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
 			</div>
-
-		</nav>
-	</div>
-
+			<div class="collapse navbar-collapse" id="navbar-demo">
+				<ul class="nav navbar-nav" style="color: black;">
+					<li><a href="/"><img src="images/logo1.png" width="250" height="60" alt=""></a></li>
+					<li id="nav-content"><a href="/aboutus">About Us</a></li>
+					<li id="nav-content"><a href="/product">Products</a></li>
+					<li id="nav-content"><a href="/project">Project</a></li>
+					<li id="nav-content"><a href="#bottom">Contact us</a></li>
+					<li id="nav-content"><a href="/career">Career</a></li>
+				</ul>
+			</div>
+	</nav>
 		<div class="container-fluid">
 
 			<div class="jumbotron">
@@ -135,7 +134,7 @@
 				<!-- <p>A bunch of beautiful images that I didn't take (except for the first one!)</p> -->
 			</div>
 			<br><br>
-			<h1 style="border-top: 1px solid #E3E3E3; line-height: 0.0em !important; text-align: center; margin-bottom: 30px; color: #005bae;"><span style="background: #fff !important; padding: 0 10px !important;">HIGHLIGHTS</span></h1>
+			<h1 style="border-top: 1px solid #E3E3E3; line-height: 0.0em !important; text-align: center; margin-bottom: 30px; color: #005bae;"><span style="background: #fff !important; padding: 0 10px !important; ">HIGHLIGHTS</span></h1>
 
 			<ul style="font-family:'Josefin Sans';" id="highlights">
 				<li>ALCEN successfully completed supply, installation, commmissioning &
@@ -200,26 +199,17 @@
 
 												</div>
 											</div>
-											<br>
-
-											<footer id="bottom" class="page-footer">
-												<div class="container-fluid">
-													<div class="row">
-														<div class="col-lg-6">
-															<p id="company-name">Alcen Technologies Private Limited</p>
-														</div>
-
-														<div class="col-lg-6">
-															<p id="footer-text">Plot No.:N-2/170,IRC Village,Nayapalli,Bhubaneswar-751015,Odisha<br>Tel.:+91 674 2552984 2552985, Fax: +91 674 2552986</p>
-														</div>
-
-													</div>
-
-												</div>
-
-
-
-											</footer>
+											<br><br>
+	                    <footer id="bottom" class="page-footer">
+	                        <div class="row">
+	                          <div class="col-lg-6">
+	                            <p id="company-name">Alcen Technologies Private Limited</p>
+	                          </div>
+	                          <div class="col-lg-6">
+	                            <p id="footer-text">Plot No.- 24/1/A, Chandaka industial Estate,NIFT Building,Near KIIT Campus,BHUBANESWAR-751024. ,Odisha<br>Tel.:+91 674 2552984 2552985, Fax: +91 674 2552986<br>Email: alcentechnology@gmail.com<br><a href="/login"><i class="fas fa-user" style="color:white;">Admin Login</i><a></p>
+	                          </div>
+	                        </div>
+	                    </footer>
 
 											<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
 											<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
