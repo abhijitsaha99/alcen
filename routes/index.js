@@ -1,17 +1,39 @@
 var express = require('express');
 var router = express.Router();
 var session;
-const news = require('../models/notice')
+const news = require('../models/notice');
+const career = require('../models/careerSchema');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
   var query = news.find({})
   query.select('title body');
-  query.exec((err,data) => {
-    console.log(data);
-    res.render('index', {"datas": data});
+  query.exec((err, data) => {
+    //console.log(data);
+    res.render('index', {
+      "datas": data
+    });
   })
+});
+router.get('/delete/:title', function(req, res, next) {
+  console.log("inside");
+  var deleteTitle = req.params.title;
+  news.deleteOne({
+    title: deleteTitle
+  }, function(err) {
+    res.end('hello');
   });
+  });
+router.get('/career', function(req, res, next) {
+  var query = career.find({})
+  query.select('careerTitle careerBody');
+  query.exec((err, data) => {
+    console.log(data);
+    res.render('career', {
+      "datas": data
+    });
+  })
+});
 
 router.get('/aboutus', function(req, res, next) {
   res.render("aboutus1");
@@ -26,29 +48,32 @@ router.get('/project', function(req, res, next) {
   res.render('project');
 });
 router.get('/details/:title', function(req, res, next) {
-  var d=req.params.title;
+  var d = req.params.title;
   var temp;
-  var query= news.find({title:d});
+  var query = news.find({
+    title: d
+  });
   query.select('title body');
-  query.exec((err,data) => {
-  console.log(data);
-  res.render('detail', {"datas": data[0]});
-//  temp=data;
+  query.exec((err, data) => {
+    console.log(data);
+    res.render('detail', {
+      "datas": data[0]
+    });
+    //  temp=data;
   })
   // var query2 = news.find({})
   // query2.select('title body');
   // query2.exec((err2,fulldata) => {
   //   console.log(err2);
-    // console.log(fulldata);
-  })
-;
-  router.get('/login', function(req, res, next) {
-  var flag=0;
+  // console.log(fulldata);
+});
+router.get('/login', function(req, res, next) {
+  var flag = 0;
   res.render('login', {
     title: 'form',
     success: false,
     errors: req.session.errors,
-    });
+  });
   req.session.errors = null;
 });
 router.post('/login', function(req, res, next) {
@@ -78,6 +103,14 @@ router.post('/enter', function(req, res) {
     .then(res.redirect('/'))
     .catch((err) => console.log(err))
 });
-
-
+router.get('/addcareer', function(req, res, next) {
+  res.render('careeradd');
+})
+router.post('/addcareer', function(req, res) {
+  let newCareer = new career(req.body);
+  console.log(newCareer);
+  newCareer.save()
+    .then(res.redirect('/career'))
+    .catch((err) => console.log(err))
+});
 module.exports = router;
