@@ -25,6 +25,7 @@
   .title{
     padding-left: 2px;
     padding-top: 8px;
+    background-color: inherit;
   }
 
   #ab1{
@@ -55,16 +56,17 @@
         <hr>
         <a href="/"><button type="button" class="btn btn-dark">Home   </button></a>
         <% if(flag) { %>
-        <a href="/delete/<%= datas.title %>" class="btn btn-dark" id="toglee">  <button>Delete</button></a>
+        <a href="/delete/<%= datas.title %>"  id="toglee"><button class="btn btn-dark">Delete</button></a>
         <% } %>
       </div>
         <div class="col-lg-3">
           <br><br><br>
           <div id="xyz" class="">
             <h4 class="card-back">NEWS EVENTS</h4>
+            <div id="MyDivName" class="card-img" style="overflow:overflow; height: 300px;">
             <ul>
               <% for(var i=(fulldata.length-1); i>=0; i-- ) { %>
-              <li>
+                <li>
 
                 <span class="title">
                   <a href="/details/<%= fulldata[i].title %>"><%= fulldata[i].title %></a>
@@ -73,7 +75,6 @@
               <% } %>
             </ul>
           </div>
-          <div id="MyDivName" class="card-img" style="overflow:overflow; height: 300px;">
 
 
 

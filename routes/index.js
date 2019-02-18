@@ -17,9 +17,16 @@ router.get('/', function(req, res, next) {
   })
 });
 router.get('/option',function (req,res,next) {
-  res.render('option');
-
-})
+    session = req.session;
+    if (session.uniqueID) {
+      res.render('option');
+      console.log(session.uniqueID);
+    } else {
+      {
+        res.render('form');
+      }
+    }
+  });
 router.get('/delete/:title', function(req, res, next) {
   console.log("inside");
   var deleteTitle = req.params.title;
@@ -86,6 +93,17 @@ router.post('/login', function(req, res, next) {
 router.get('/redirect', function(req, res, next) {
   session = req.session;
   if (session.uniqueID) {
+    res.redirect('option');
+    console.log(session.uniqueID);
+  } else {
+    {
+      res.render('form');
+    }
+  }
+});
+router.get('/optdssdsdssd', function(req, res, next) {
+  session = req.session;
+  if (session.uniqueID) {
     res.render('add');
     console.log(session.uniqueID);
   } else {
@@ -103,8 +121,16 @@ router.post('/enter', function(req, res) {
     .catch((err) => console.log(err))
 });
 router.get('/addcareer', function(req, res, next) {
-  res.render('careeradd');
-})
+    session = req.session;
+    if (session.uniqueID) {
+      res.render('careeradd');
+      console.log(session.uniqueID);
+    } else {
+      {
+        res.render('form');
+      }
+    }
+  });
 router.post('/addcareer', function(req, res) {
   let newCareer = new career(req.body);
   console.log(newCareer);
