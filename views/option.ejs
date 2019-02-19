@@ -10,21 +10,28 @@
        height: 500px;
        background-color: #EEEEEE;
      }
+     .button-sizing{
+       width: 60%;
+       border-radius: 8px;
+     }
      </style>
     <title></title>
   </head>
-  <body>
+  <body style="background-color:#2f3640;">
     <center>
-    <div class="container">
+    <div class="container mt-5">
       <div class="row">
         <div class="col-lg-4"></div>
-        <div class="slide col-lg-4 border border-secondary rounded">
-          <h1><i class="fa fa-database" aria-hidden="true"></i></h1><br>
-          <h1 class="card-title">Select an entry</h1>
+        <br><br>
+        <div class="slide col-lg-4 border border-secondary rounded" style="background-color:#f6e58d;">
+          <br><br>
+          <h1 class="card-title"><i class="fa fa-database" aria-hidden="true"></i>Select an entry</h1>
           <hr>
-          <button type="button" class="btn btn-primary my-2" name="news-events">Add news-events</button>
-          <br>
-          <button type="button" class="btn btn-primary my-2 md-1" name="career">Add career</button>
+          <br><br>
+          <a href="/addnews"><button type="button" class="btn btn-primary my-2 button-sizing" name="news-events">Add news-events</button></a>
+          <br><br>
+          <a href="/addcareer"><button type="button" class="btn btn-primary my-2 md-1 button-sizing" name="career">Add career</button><br><br></a>
+          <a href="/"><button type="button" class="btn btn-primary my-2 md-1 button-sizing" name="home">Home</button></a>
         </div>
       </center>
   </div>
