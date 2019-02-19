@@ -15,6 +15,10 @@ router.get('/', function(req, res, next) {
     });
   })
 });
+router.get('/option',function (req,res,next) {
+  res.render('option');
+
+})
 router.get('/delete/:title', function(req, res, next) {
   console.log("inside");
   var deleteTitle = req.params.title;
@@ -34,6 +38,7 @@ router.get('/career', function(req, res, next) {
     });
   })
 });
+
 
 router.get('/aboutus', function(req, res, next) {
   res.render("aboutus1");
