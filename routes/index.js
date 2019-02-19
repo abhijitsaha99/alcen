@@ -27,20 +27,29 @@ router.get('/option',function (req,res,next) {
       }
     }
   });
-router.get('/delete/:title', function(req, res, next) {
-  console.log("inside");
-  var deleteTitle = req.params.title;
-  news.deleteOne({
-    title: deleteTitle
-  }, function(err) {
-    res.redirect('/');
-  });
-  });
+  router.get('/delete/:title', function(req, res, next) {
+    console.log("inside");
+    var deleteTitle = req.params.title;
+    news.deleteOne({
+      title: deleteTitle
+    }, function(err) {
+      res.redirect('/');
+    });
+    });
+    router.get('/careerdelete/:title', function(req, res, next) {
+      console.log("inside");
+      var deleteTitle = req.params.title;
+      career.deleteOne({
+        careerTitle: deleteTitle
+      }, function(err) {
+        res.redirect('/career');
+      });
+      });
 router.get('/career', function(req, res, next) {
   var query = career.find({})
   query.select('careerTitle careerBody');
   query.exec((err, data) => {
-    console.log(data);
+    // console.log(data);
     res.render('career', {
       "datas": data
     });
@@ -69,6 +78,14 @@ router.get('/details/:title', async function(req, res, next) {
  let fulldata = await news.find({}, 'title body')
  console.log(flag);
  res.render('detail', {
+   "datas": datas[0], "fulldata": fulldata , "flag":flag
+ })
+});
+router.get('/careerdetails/:title', async function(req, res, next) {
+ let title = req.params.title
+ let datas = await career.find({careerTitle: title}, 'careerTitle careerBody')
+ let fulldata = await career.find({}, 'careerTitle careerBody')
+  res.render('careerdetail', {
    "datas": datas[0], "fulldata": fulldata , "flag":flag
  })
 });
@@ -104,7 +121,7 @@ router.get('/redirect', function(req, res, next) {
     }
   }
 });
-router.get('/optdssdsdssd', function(req, res, next) {
+router.get('/addnews', function(req, res, next) {
   session = req.session;
   if (session.uniqueID) {
     res.render('add');
@@ -120,7 +137,7 @@ router.post('/enter', function(req, res) {
   let latestnews = new news(req.body);
   // console.log(latestnews);
   latestnews.save()
-    .then(res.redirect('/'))
+    .then(res.redirect('/option'))
     .catch((err) => console.log(err))
 });
 router.get('/addcareer', function(req, res, next) {
@@ -136,9 +153,8 @@ router.get('/addcareer', function(req, res, next) {
   });
 router.post('/addcareer', function(req, res) {
   let newCareer = new career(req.body);
-  console.log(newCareer);
-  newCareer.save()
-    .then(res.redirect('/career'))
+    newCareer.save()
+    .then(res.redirect('/option'))
     .catch((err) => console.log(err))
 });
 module.exports = router;

@@ -20,12 +20,11 @@
 
   #MyDivName{
     background: #eee;
-    
   }
 
   .title{
     padding-left: 2px;
-    padding-top: 1px !important;
+    padding-top: 8px;
     background-color: inherit;
   }
 
@@ -36,7 +35,7 @@
   </style>
   <meta charset="utf-8">
   <title>
-    <%= datas.title %>
+    <%= datas.careerTitle %>
   </title>
 </head>
 
@@ -48,31 +47,31 @@
     <div class="row">
       <div class="col-lg-8">
         <h1 id="ab1" class="card-header" style="font-family:'Josefin Sans'; font-size: 30px;max-width:100%; ">
-        <%= datas.title %>
+        <%= datas.careerTitle %>
       </h1>
         <hr>
         <p style="font-family:'Josefin Sans';">
-          <%= datas.body %>
+          <%= datas.careerBody %>
         </p>
         <hr>
         <a href="/"><button type="button" class="btn btn-dark">Home   </button></a>
         <% if(flag) { %>
-        <a href="/delete/<%= datas.title %>"  id="toglee"><button class="btn btn-dark">Delete</button></a>
+        <a href="/careerdelete/<%= datas.careerTitle %>"  id="toglee"><button class="btn btn-dark">Delete</button></a>
         <% } %>
       </div>
         <div class="col-lg-3">
           <br><br><br>
           <div id="xyz" class="">
             <h4 class="card-back">NEWS EVENTS</h4>
-            <div id="MyDivName" class="card-img" style="overflow:overflow; height: auto;">
+            <div id="MyDivName" class="card-img" style="overflow:overflow; height: 300px;">
             <ul>
               <% for(var i=(fulldata.length-1); i>=0; i-- ) { %>
-
+                <li>
 
                 <span class="title">
-                  <a href="/details/<%= fulldata[i].title %>"><li><%= fulldata[i].title %></li></a>
+                  <a href="/careerdetails/<%= fulldata[i].careerTitle %>"><%= fulldata[i].careerTitle %></a>
                 </span>
-
+              </li>
               <% } %>
             </ul>
           </div>

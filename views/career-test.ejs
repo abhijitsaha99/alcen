@@ -174,13 +174,11 @@
               <h4 style="padding:10px;font-family:'Josefin Sans'; color:white;">QUICK LINKS</h4>
               <hr>
             </div>
-            <div class="cardLinks" style="padding-left:5px; font-family:'Josefin Sans';">
-                <a href="#ab1"  class="links">  <i class="fab fa-google-play"></i>TRANSFORMING LIVES THROUGH SOLAR ENERGY</a><br><br></li>
-                <a href="#ab2"   class="links">  <i class="fab fa-google-play"></i>WHY INVEST IN SOLAR POWER?</a><br><br></li>
-                <a href="#ab3"   class="links">  <i class="fab fa-google-play"></i>ALCEN: A ONE-STOP SOLAR ENERGY SUPPLIER</a><br><br></li>
-                <a href="#ab4"   class="links">  <i class="fab fa-google-play"></i>COMBINING INNOVATION,EXPERIENCE AND RELIABILITY</a><br><br></li>
-                <a href="#ab5"   class="links">  <i class="fab fa-google-play"></i>WHY US?</a></li>
-            </div>
+            <ul>
+              <% for(var i=(datas.length-1); i>=0; i-- ) { %>
+              <li><a href="/careerdetails/<%= datas[i].careerTitle %>"><%= datas[i].careerTitle %></a></li>
+              <% } %>
+            </ul>
           </div>
         </div>
       </div>

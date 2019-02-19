@@ -18,7 +18,7 @@
 </head>
 <style>
   .title{
-    font-size: 15px;
+    font-size: 18px;
     padding-bottom: 20px;
     padding-top: 20px;
     color: black;
@@ -136,10 +136,10 @@
                   <div id="xyz">
                     <h4>NEWS EVENTS</h4>
                   </div>
-                  <div id="MyDivName" class="card-img" style="overflow:hidden; height: 300px;" onmouseover="pauseDiv()" onmouseout="resumeDiv()">
+                  <div id="MyDivName" class="card-img" style="overflow:hidden; height: 250px;" onmouseover="pauseDiv()" onmouseout="resumeDiv()">
                     <ul>
                       <% for(var i=(datas.length-1); i>=0; i-- ) { %>
-                      <li><span class="title"><a href="/details/<%= datas[i].title %>"><%= datas[i].title %></a> </span></li>
+                      <span class="title"><a href="/details/<%= datas[i].title %>"><li><%= datas[i].title %></li></a> </span>
                       <% } %>
                     </ul>
 

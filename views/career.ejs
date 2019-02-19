@@ -1,13 +1,207 @@
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <ul>
-      <% for(var i=(datas.length-1); i>=0; i-- ) { %>
-      <li><%= datas[i].careerTitle %></a> </span></li>
-      <% } %>
-    </ul>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>About Us</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+  <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"> -->
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+  <style>
+  body{
+
+    background-image: url(https://cratewholesale.com/wp-content/uploads/2012/05/light-green-background-2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+
+
+  }
+    .navbar-inverse {
+      background: #2c3e50;
+      color: white;
+    }
+    .navbar-inverse .navbar-brand, .navbar-inverse a{
+      color:white;
+    }
+    .navbar-inverse .navbar-nav>li>a {
+      color: #2c3e50;
+    }
+    .navbar{
+      border: none;
+      border-radius: none;
+    }
+
+    .company-logo {
+      background-color: #edffb3;
+    }
+
+    .page-footer{
+      background-color: #2c3e50;
+      padding-top: 10px;
+      padding-bottom: 20px;
+      font-size: 15px;
+    }
+    .navbar-nav > li > a:hover {
+
+      color: #008e00!important;
+      background-color: #d6e3c5!important;
+
+  }
+
+    #company-name{
+      font-size:25px;
+      color:#edffb3
+    }
+
+		.dropdown-menu{
+			background: #293e50;
+		}
+
+		.dropdown-menu>li>a{
+			color: #ffffff;
+		}
+
+    p{
+      font-size: 18px;
+    }
+
+    #xyz{
+      background: #2c3e50;
+      color: #ffffff;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-left: 70px;
+    }
+
+    #company-name{
+      font-size:25px;
+      color:#edffb3;
+      padding-left: 10px;
+    }
+
+    #footer-text{
+      color:#ffffff;
+      padding-left: 10px;
+    }
+
+    .card-img{
+      background: #eee;
+    }
+
+    .jumbotron {
+      color: #fff;
+      background: linear-gradient(#75777a,#2c3e50);
+    }
+    .fullCard{
+      background: #eee;
+    }
+    .nav > li > a{
+      font-size: 18px;
+      padding-top: 15px;
+      color: #fff;
+    }
+
+    #nav-content{
+      padding-top: 20px;
+
+    }
+
+
+
+
+  </style>
+
+
+
+<body>
+  <nav class="navbar navbar-inverse" style="background-color:#eee;" >
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-demo">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-demo">
+        <ul class="nav navbar-nav" style="color: black;">
+          <li><a href="/"><img src="images/logo1.png" width="250" height="60" alt=""></a></li>
+          <li id="nav-content"><a href="/aboutus">About Us</a></li>
+          <li id="nav-content"><a href="/product">Products</a></li>
+          <li id="nav-content"><a href="/project">Project</a></li>
+          <li id="nav-content"><a href="#bottom">Contact us</a></li>
+          <li id="nav-content"><a href="/career">Career</a></li>
+        </ul>
+      </div>
+  </nav>
+</div>
+
+  <div class="container-fluid">
+
+    <div class="jumbotron">
+      <h1><i class="fa fa-info-circle"></i> Career </h1>
+
+
+    </div>
+    <div class="row">
+      <div class="col-lg-1">
+
+      </div>
+      <div class="col-lg-7 col-xs-12 col-sm-12">
+        <h1 id="ab1" style="font-family:'Josefin Sans'; font-size: 30px;max-width:100%; ">
+          OPPORTUNITIES
+          <hr>
+        </h1>
+        <p style="font-family:'Josefin Sans';">
+          ALCEN Technology has the vision to be an exemplary leader in the field of Training & Development by creating an environment where the skill development of trainees takes place in a very open and friendly manner. We always strive to find out innovative ways of training and Development in the ever advancing power sector. Our curriculum and teaching methodology reinforce the basic knowledge that the students carry after passing out from the engineering schools and colleges to a level of applied knowledge, required in the power sector. The Institute also extends its training facility for the working professionals in existing power sector to make them abreast with advanced technology and power management.<br>
+
+          The Institute is blessed with a team of highly qualified personalities as our faculty to train, mentor the trainees in different systems of power sector. The vast experience of faculties ranging from erection and commissioning of power plants to electricity regulatory affairs provides a holistic training approach to the trainee.<br>
+
+          We at ALCEN Technology understand the necessity of "Training the Trainers" in order to create an updated intellectual resource for knowledge sharing.
+          The faculties attend regular conferences, seminars to update their knowledge in the industry. Also, the faculties work very closely with the industry for understanding and resolving their problems
+      </div>
+      <div class="col-lg-3 col-xs-10 col-sm-10 container">
+        <div class="fullCard" id="thumbnail">
+          <div class="cardContent">
+            <div class="cardText">
+              <h4 style="padding:10px;font-family:'Josefin Sans'; color:white;">QUICK LINKS</h4>
+              <hr>
+            </div>
+            <ul>
+              <% for(var i=(datas.length-1); i>=0; i-- ) { %>
+              <li><a href="/careerdetails/<%= datas[i].careerTitle %>"><%= datas[i].careerTitle %></a></li>
+              <% } %>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-1">
+
+      </div>
+    </div>
+  </div>
+    <br><br>
+    <footer id="bottom" class="page-footer">
+        <div class="row">
+          <div class="col-lg-6">
+            <p id="company-name">Alcen Technologies Private Limited</p>
+          </div>
+          <div class="col-lg-6">
+            <p id="footer-text">Plot No.- 24/1/A, Chandaka industial Estate,NIFT Building,Near KIIT Campus,BHUBANESWAR-751024. ,Odisha<br>Tel.:+91 674 2552984 2552985, Fax: +91 674 2552986<br>Email: alcentechnology@gmail.com<br><a href="/login"><i class="fas fa-user" style="color:white;">Admin Login</i><a></p>
+          </div>
+        </div>
+    </footer>
+
+
+
+
+</body>
+
 </html>
