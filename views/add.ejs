@@ -17,13 +17,13 @@
   <div class="container mt-5">
 
         <form class="form-group " method="POST" action="/enter">
-    <p class="">Please fill in the details</p>
+    <h3 class="mt-3">Please fill in the details</h3>
     <hr>
     <label for="title"><b>Title</b></label>
     <input type="text" class="form-control" placeholder="Title" name="title" required>
 
     <label for="body"><b>Body</b></label>
-    <textarea rows="7" class="form-control" cols="45" type="text" placeholder="Enter Notice" name="body" required></textarea>
+    <textarea rows="7" class="form-control" cols="45" type="text" placeholder="Enter News Description" name="body" required></textarea>
 
     <button type="submit" class="btn btn-danger col mt-3">Submit</button>
   </div>
@@ -33,6 +33,7 @@
 </center>
 </body>
  <style>
+ @import url('https://fonts.googleapis.com/css?family=PT+Serif');
   body {font-family:  Helvetica, sans-serif;
     background: rgba(0,0,0,0.05);
 }
@@ -87,19 +88,14 @@ button {
 button:hover {
     opacity:1;
 }
-
-
-
-/* Add padding to container elements */
-.container {
-
+label{
+  font-family: 'PT Serif', serif;
+  font-size: 20px;
 }
 
-/* Clear floats */
 
-/* Change styles for cancel button and signup button on extra small screens */
 
-}
+
 </style>
 </body>
 
